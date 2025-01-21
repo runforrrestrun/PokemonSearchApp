@@ -52,11 +52,11 @@ async function fetchData() {
       const statName = statEntry.stat.name;
       const baseStat = statEntry.base_stat;
       // Match statName to a div ID
-      const statDiv = document.getElementById(
+      const statCell = document.getElementById(
         statName.replace("special-", "sp-")
       ); // Adjust for special-attack/defense
-      if (statDiv) {
-        statDiv.textContent = baseStat;
+      if (statCell) {
+        statCell.textContent = baseStat;
       }
     });
   } catch (error) {
