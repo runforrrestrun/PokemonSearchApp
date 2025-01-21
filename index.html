@@ -3,7 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Pokémon Search App</title>
   </head>
-  <body></body>
+  <body>
+    <main class="PokemonSearchApp">
+      <h1>Pokémon Search App</h1>
+
+      <div class="psaContainer">
+        <form role="search" id="search-from">
+          <label for="pokemonName" class="title"
+            >Search for Pokémon Name or ID:</label
+          >
+          <input type="text" name="pokemon" id="pokemonName" />
+          <button onclick="fetchData()" id="search-button">Search</button>
+        </form>
+
+        <div class="pokemonData">
+          <div class="topContainer">
+            <div class="name-and-id">
+              <div id="pokemon-name"></div>
+              <div id="pokemon-id">#</div>
+            </div>
+            <div class="size">
+              <div id="weight"></div>
+              <div id="height"></div>
+            </div>
+            <div id="sprite-container">
+              <img
+                src=""
+                alt="pokemon sprite"
+                id="pokemonSprite"
+                style="display: none"
+              />
+            </div>
+            <div id="type"></div>
+          </div>
+
+          <div class="bottomContainer">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Base</th>
+                  <td>Stats</td>
+                </tr>
+                <tr>
+                  <th>Hp:</th>
+                  <td id="hp"></td>
+                </tr>
+                <tr>
+                  <th>Attack:</th>
+                  <td id="attack"></td>
+                </tr>
+                <tr>
+                  <th>Defence:</th>
+                  <td id="defense"></td>
+                </tr>
+                <tr>
+                  <th>sp. Attack :</th>
+                  <td id="sp-attack"></td>
+                </tr>
+                <tr>
+                  <th>sp. Defence :</th>
+                  <td id="sp-defense"></td>
+                </tr>
+                <tr>
+                  <th>Speed:</th>
+                  <td id="speed"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="javaScript.js"></script>
+  </body>
 </html>
